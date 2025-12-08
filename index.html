@@ -110,6 +110,16 @@ body {
   font-size: clamp(14px, 3.5vw, 18px);
 }
 
+.instruction-text {
+  text-align: center;
+  font-size: clamp(18px, 4.5vw, 24px);
+  font-weight: 500;
+  margin: 0 0 32px 0;
+  color: var(--fg);
+  opacity: 0.95;
+  line-height: 1.4;
+}
+
 /* simple text entrance */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(10px); }
@@ -209,6 +219,9 @@ body {
 
   <main class="app" id="app">
     <section class="stage" aria-live="polite">
+      <!-- Instruction text -->
+      <p class="instruction-text">Mira,<br>please click on the box</p>
+      
       <!-- Gift box the user taps/clicks -->
       <button class="gift" id="gift" aria-label="Open the gift">
         <span class="gift-emoji" aria-hidden="true">🎁</span>
@@ -244,6 +257,7 @@ const gift = document.getElementById('gift');
 const reveal = document.getElementById('reveal');
 const friendNameSpan = document.getElementById('friendName');
 const audioEl = document.getElementById('music');
+const instructionText = document.querySelector('.instruction-text');
 
 // Set friend name in UI
 friendNameSpan.textContent = FRIEND_NAME;
@@ -319,6 +333,7 @@ function handleGiftOpen() {
   // After shake, transition to reveal state
   window.setTimeout(() => {
     gift.remove();
+    if (instructionText) instructionText.remove();
     reveal.hidden = false;
 
     // Confetti celebration
