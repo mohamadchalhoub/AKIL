@@ -8,9 +8,9 @@
 :root {
   --bg: #0f172a;           /* background color */
   --fg: #e2e8f0;           /* primary text color */
-  --accent: #a78bfa;       /* accent (purple) */
+  --accent: #3b82f6;       /* accent (blue) */
   --accent-2: #34d399;     /* accent (green) */
-  --accent-3: #f472b6;     /* accent (pink) */
+  --accent-3: #f97316;     /* accent (orange) */
   --btn-bg: #111827;
   --btn-fg: #f9fafb;
   --shadow: 0 10px 30px rgba(0,0,0,0.35);

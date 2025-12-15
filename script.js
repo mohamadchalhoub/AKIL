@@ -1,6 +1,6 @@
 // Birthday web app
 // Customize knobs below:
-const FRIEND_NAME = 'Bestie'; // Change your friend's display name
+const FRIEND_NAME = 'AKIL'; // Change your brother's display name
 const CONFETTI_BURSTS = 3;    // How many confetti bursts after opening
 const BALLOON_COUNT = 10;     // How many balloons to float
 const SHAKE_MS = 700;         // Shake duration when clicking gift
